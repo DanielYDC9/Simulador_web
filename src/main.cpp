@@ -8,6 +8,6 @@ using namespace std;
 
 int main() {
   vector<Paciente> pacientes = { Paciente("Juan Perez", 1), Paciente("Maria Lopez", 2) };
-  vector<Medico> medicos;
-  vector<CitaMedica> citas;
+  vector<Medico> medicos = { Medico("Dr. Gomez", "Cardiología"), Medico("Dra. Torres", "Pediatría") };
+  vector<CitaMedica> citas = { CitaMedica(1, "2024-11-20") };
   
