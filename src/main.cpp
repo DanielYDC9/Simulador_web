@@ -7,11 +7,36 @@
 using namespace std;
 
 int main() {
-  vector<Paciente> pacientes = { Paciente("Juan Perez", 1), Paciente("Maria Lopez", 2) };
-  vector<Medico> medicos = { Medico("Dr. Gomez", "Cardiología"), Medico("Dra. Torres", "Pediatría") };
-  vector<CitaMedica> citas = { CitaMedica(1, "2024-11-20") };
-  
-pacientes = { Paciente("Juan Perez", 1), Paciente("Maria Lopez", 2) };
-medicos = { Medico("Dr. Gomez", "Cardiología"), Medico("Dra. Torres", "Pediatría") };
-citas = { CitaMedica(1, "2024-11-20") };
+    // Lista de pacientes, médicos y citas.
+    vector<Paciente> pacientes;
+    vector<Medico> medicos;
+    vector<CitaMedica> citas;
 
+    // Crear pacientes y médicos de ejemplo.
+    pacientes.push_back(Paciente("Juan Perez", 1));
+    pacientes.push_back(Paciente("Maria Lopez", 2));
+
+    medicos.push_back(Medico("Dr. Gomez", "Cardiología"));
+    medicos.push_back(Medico("Dra. Torres", "Pediatría"));
+
+    // Asignar una cita.
+    citas.push_back(CitaMedica(1, "2024-11-20"));
+
+    // Mostrar datos.
+    cout << "Pacientes registrados:\n";
+    for (const auto& paciente : pacientes) {
+        paciente.mostrarPaciente();
+    }
+
+    cout << "\nMédicos registrados:\n";
+    for (const auto& medico : medicos) {
+        medico.mostrarMedico();
+    }
+
+    cout << "\nCitas programadas:\n";
+    for (const auto& cita : citas) {
+        cita.mostrarCita();
+    }
+
+    return 0;
+}
