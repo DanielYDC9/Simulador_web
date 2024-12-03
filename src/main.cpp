@@ -25,7 +25,7 @@ int main() {
     // Mostrar datos.
     cout << "Pacientes registrados:\n";
     for (const auto& paciente : pacientes) {
-        paciente.mostrarPaciente();
+        paciente.mostrar_paciente();
     }
 
     cout << "\nMédicos registrados:\n";
